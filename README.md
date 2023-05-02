@@ -1,8 +1,8 @@
 # MDM: Human Motion Diffusion Model
 
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/human-motion-diffusion-model/motion-synthesis-on-humanact12)](https://paperswithcode.com/sota/motion-synthesis-on-humanact12?p=human-motion-diffusion-model)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/human-motion-diffusion-model/motion-synthesis-on-humanml3d)](https://paperswithcode.com/sota/motion-synthesis-on-humanml3d?p=human-motion-diffusion-model)
+
 [![arXiv](https://img.shields.io/badge/arXiv-<2209.14916>-<COLOR>.svg)](https://arxiv.org/abs/2209.14916)
+<a href="https://replicate.com/arielreplicate/motion_diffusion_model"><img src="https://replicate.com/arielreplicate/motion_diffusion_model/badge"></a>
 
 <a href="https://replicate.com/arielreplicate/motion_diffusion_model"><img src="https://replicate.com/arielreplicate/motion_diffusion_model/badge"></a>
 
@@ -23,6 +23,17 @@ If you find this code useful in your research, please cite:
   year={2022}
 }
 ```
+
+## Checkout MDM Follow-ups (partial list)
+
+🐉 [SinMDM](https://sinmdm.github.io/SinMDM-page/) - Learns single motion motifs - even for non-humanoid characters.
+
+👯 [PriorMDM](https://priormdm.github.io/priorMDM-page/) - Uses MDM as a generative prior, enabling new generation tasks with few examples or even no data at all.
+
+🍏 [PhysDiff](https://nvlabs.github.io/PhysDiff/) - Adds physical guidance to MDM to generate more realistic results.
+
+💃 [EDGE](https://edge-dance.github.io/) - Learns music-to-dance motion with MDM and off-the-shelf audio encoder.
+
 
 ## News
 
@@ -94,6 +105,7 @@ bash prepare/download_recognition_models.sh
 
 ```bash
 bash prepare/download_smpl_files.sh
+bash prepare/download_recognition_models.sh
 bash prepare/download_recognition_unconstrained_models.sh
 ```
 </details>
@@ -244,7 +256,7 @@ python -m sample.generate --model_path ./save/humanact12/model000350000.pt --act
 ### Generate a single action
 
 ```shell
-python -m sample.generate --model_path ./save/humanact12/model000350000.pt --text_prompt "drink"
+python -m sample.generate --model_path ./save/humanact12/model000350000.pt --action_name "drink"
 ```
 </details>
 
